@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ujian Tengah Semester</title>
+    <!-- file css -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="content">
+    <header>
+        <h2 class="judul">Prodi S1 Informatika</h2>
+        <h3 class="deskripsi">Jl. Tulang Bawang 26 Kadipiro Kota Surakarta</h3>
+    </header>
+ 
+    <div class="menu">
+        <ul>
+            <li><a href="index.php?page=home">Home</a></li>
+            <li><a href="index.php?page=tentang">Tentang Saya</a></li>
+            <li><a href="index.php?page=matakuliah">Mata Kuliah</a></li>
+        </ul>
+    </div>
+ 
+    <div class="isi">
+ 
+ 
+    <?php 
+    if(isset($_GET['page'])){
+        $page = $_GET['page'];
+ 
+        switch ($page) {
+            case 'home':
+                include "halaman/home.php";
+                break;
+            case 'tentang':
+                include "halaman/about.php";
+                break;  
+                case 'matakuliah':
+                    include "halaman/matakuliah.php";
+                    break;      
+            default:
+                echo "<center><h3>Maaf. Halaman tidak di temukan !</h3></center>";
+                break;
+        }
+    }else{
+        include "halaman/home.php";
+    }
+ 
+     ?>
+ 
+    </div>
+    <footer>
+        <p> 2022. Nama<p>
+    </footer>
+</div>
+</body>
+</html>
