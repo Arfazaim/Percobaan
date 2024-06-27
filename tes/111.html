@@ -1,0 +1,621 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="new-layout notranslate" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta http-equiv="x-pod-id" content="production-monday-app-8bbd59585-v4jbc" />
+  <meta http-equiv="x-build-timestamp" content="1719299839" />
+  <meta http-equiv="x-sw-cache" content="Mon, 01 Jul 2024 06:57:45 GMT" />
+  <meta http-equiv="x-server-timestamp" content="1719385065" />
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.monday.com/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://cdn.monday.com/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://cdn.monday.com/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.monday.com/apple-touch-icon-180x180.png">
+
+<link rel="icon" type="image/png" href="https://cdn.monday.com/favicon-monday-v4.png">
+
+<meta name="theme-color" content="#ffffff">
+
+  <title>monday.com - Show</title>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="f70365e7483d0b638db8d9508c9f2ebc2d0fe7a85cc75c12265f77df56cbd51c" />
+  <script>(function(w, p, m, mh) {
+  let trackLink = null;
+  trackLink = "https://ei.monday.com/prod/event";
+m.initTime = Date.now();
+w.Pulse = w.Pulse || {};
+mh.perfMark = (!p || !p.mark) ? function() {} : function(name, options) { w.latestLoadEvent = name; p.mark(name, options); };
+mh.perfMark("page-loaded-at");
+
+w.bundles_urls = w.bundles_urls || {};
+function getBrowser(userAgent) {
+  const pattern = /\b(Chrome|Firefox|Safari|MSIE|Trident\/.*?rv:|Edge|Opera)\b/;
+  const match = userAgent.match(pattern);
+
+  if (match) {
+    if (match[0].includes('Trident')) {
+      return 'Internet Explorer';
+    }
+    return match[0];
+  }
+  return "Unknown Browser";
+}
+const canReport = false;
+w.addEventListener("beforeunload", function() {
+  if(w.systemLoaded) {
+    return false;
+  }
+
+  if(canReport && trackLink) {
+    const ua = w.navigator.userAgent;
+    const browser = getBrowser(ua);
+    const data = {
+      data: {
+        timeFromStart: performance.now(),
+        cpus: w.navigator.hardwareConcurrency,
+        browser,
+        latestLoadEvent: w.latestLoadEvent
+      },
+      created_at: Date.now(),
+      browser,
+      uuid: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
+      name: "system_load_rage_quit",
+      device: "desktop",
+    };
+    w.navigator && w.navigator.sendBeacon && w.navigator.sendBeacon(trackLink, JSON.stringify([data]));
+  }
+
+  if(canReport && !trackLink) {
+    console.error("rage quite after - ", performance.now(), "at", w.latestLoadEvent);
+  }
+  // Don't show the alert
+  return false;
+});
+w.bundles_urls["mndy_variables_init"] = "https://cdn.monday.com/build/mndy_variables_init-b308fcf9bb92df87487d.js";
+w.bundles_urls["bigbrain_tracker"] = "https://cdn.monday.com/build/bigbrain_tracker-5844bd5714c90c3eaad1.js";
+w.bundles_urls["pixels_init"] = "https://cdn.monday.com/build/pixels_init-fd86687ac9f6919687a3.js";
+w.bundles_urls["babel_polyfill_and_helpers"] = "https://cdn.monday.com/build/babel_polyfill_and_helpers-9f6a162aaceef6415278.js";
+w.bundles_urls["service-worker-interface"] = "https://cdn.monday.com/build/service-worker-interface-f201d13df4ee1f100d76.js";
+w.bundles_urls["client_init"] = "https://cdn.monday.com/build/client_init-9d0c6532242665c8f1e9.js";
+w.bundles_urls["react_vendor"] = "https://cdn.monday.com/build/react_vendor-9fac529ce2ce78252588.js";
+w.bundles_urls["utility_vendor"] = "https://cdn.monday.com/build/utility_vendor-29d992903c89eaede471.js";
+w.bundles_urls["monday_modules_vendor"] = "https://cdn.monday.com/build/monday_modules_vendor-a9ff6a7874564b706169.js";
+w.bundles_urls["vendors"] = "https://cdn.monday.com/build/vendors-978f05a913aecaffc4bc.js";
+w.bundles_urls["commons-from-main"] = "https://cdn.monday.com/build/commons-from-main-b9337b55cf0ca9a10dc2.js";
+w.bundles_urls["table-with-error-state"] = "https://cdn.monday.com/build/table-with-error-state-a1707d1fb633eafd5152.js";
+w.bundles_urls["components"] = "https://cdn.monday.com/build/components-bbf5ab38014919e7f7b7.js";
+w.bundles_urls["pulse_init"] = "https://cdn.monday.com/build/pulse_init-5c667a6f17bf04c5d9d6.js";
+w.bundles_urls["main"] = "https://cdn.monday.com/build/main-265d1c8ddeb3939bb3fb.js";
+w.bundles_urls["fullstory_init"] = "https://cdn.monday.com/build/fullstory_init-a36f335c0235712d9a44.js";
+
+})(window, window.performance, window.MNDY = window.MNDY || {}, window.mondayHelpers = window.mondayHelpers || {});
+</script>
+      <script crossorigin src="https://cdn.monday.com/build/externals-24a00cba.js" type="text/javascript"  ></script>
+
+      <script>window.webpackPublicPath = "https://cdn.monday.com/build/";</script>
+
+  <script>
+window.VulcanInitData = {
+  isEmbeddedView: false,
+  shouldLoadCurrentUser: true,
+  microfrontendUrl: "https://microfrontends.monday.com",
+  features:{
+    newSnapshot: false,
+    vulcanMF: false,
+    shouldUseMfAssetsEndpoint: true,
+    useMfAssetsFallback: true,
+  },
+
+};
+</script>
+    <script crossorigin src="https://cdn.monday.com/build/babel_polyfill_and_helpers-9f6a162aaceef6415278.js" type="text/javascript"  ></script>
+
+
+
+  <link rel="preload" as="fetch" href=/layout/mndy_variables_data crossorigin>
+  <script>
+window.mondayHelpers.deferredInit.addInitPromise("mndy_variables_promise");
+</script>
+
+    <script crossorigin src="https://cdn.monday.com/build/mndy_variables_init-b308fcf9bb92df87487d.js" type="text/javascript"  ></script>
+
+<link rel="preload" as="fetch" href=/leftpane/initial_entities?preload=true crossorigin>
+    <script crossorigin src="https://cdn.monday.com/build/bigbrain_tracker-5844bd5714c90c3eaad1.js" type="text/javascript"  ></script>
+
+    <script crossorigin src="https://cdn.monday.com/build/pixels_init-fd86687ac9f6919687a3.js" type="text/javascript"  ></script>
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Kufi+Arabic:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Noto+Sans+Hebrew:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+  <style>
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@font-face {
+  font-family: "dapulse";
+  src: url("https://cdn.monday.com/fonts/dapulse_4a4d5ddd47bdfd8e46cdadf9860f69ff.eot");
+  src: url("https://cdn.monday.com/fonts/dapulse_4a4d5ddd47bdfd8e46cdadf9860f69ff.eot?#iefix") format("embedded-opentype"),
+  url("https://cdn.monday.com/fonts/dapulse_4a4d5ddd47bdfd8e46cdadf9860f69ff.woff") format("woff"),
+  url("https://cdn.monday.com/fonts/dapulse_4a4d5ddd47bdfd8e46cdadf9860f69ff.ttf") format("truetype"),
+  url("https://cdn.monday.com/fonts/dapulse_4a4d5ddd47bdfd8e46cdadf9860f69ff.svg#dapulse") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "dapulse";
+    src: url("https://cdn.monday.com/fonts/dapulse_4a4d5ddd47bdfd8e46cdadf9860f69ff.svg#dapulse") format("svg");
+  }
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+}
+
+#main #application-loader {
+  --application-surfce-color: #eceff8;
+}
+
+#main.black-app-theme #application-loader {
+  --application-background-color: #111111;
+  --application-border-color: #636363;
+  --monday-loader-gif-path: url(https://cdn.monday.com/images/loader/darth_loader.gif);
+  --application-surfce-color: #222222;
+}
+
+#main.dark-app-theme #application-loader {
+  --application-background-color: #181b34;
+  --application-border-color: #4b4e69;
+  --monday-loader-gif-path: url(https://cdn.monday.com/images/loader/dark_loader.gif);
+  --application-surfce-color: #292f4c;
+}
+
+#application-loader {
+  --application-background-color: white;
+  --application-border-color: #e6e9ef;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  --monday-loader-gif-path: url(https://cdn.monday.com/images/loader/loader.gif);
+  --application-surfce-color: #292f4c;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  z-index: 999999999;
+  opacity: 1;
+}
+
+#application-loader.hide-layout-loader {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#application-loader .loader-application-layers {
+  width: 100%;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+  position: relative;
+}
+
+#application-loader .loader-surface {
+  position: absolute;
+  background-color: var(--application-surfce-color);
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  display: -ms-flexbox;
+}
+
+#application-loader .loader-first-level {
+  position: absolute;
+  z-index: 1000;
+  top: 48px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  display: -ms-flexbox;
+  border-radius: 0;
+}
+
+#application-loader .loader-first-level-control .loader-first-level-control-component {
+  height: 100%;
+  position: absolute;
+  border-right: 1px solid var(--application-border-color);
+  z-index: 1000001;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  background-color: var(--application-background-color);
+  width: 30px; /* same as first-level-control-collapsed-width */
+}
+
+#application-loader .loader-first-level-control .loader-first-level-control-component.is-expanded {
+  width: 255px; /* same as first-level-control-width */
+}
+
+#application-loader .loader-first-level-content {
+  margin-left: 30px; /*same as first-level-control-collapsed-width*/
+  background-color: var(--application-background-color);
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#application-loader .loader-first-level-content.is-expanded {
+  margin-left: 255px; /* same as first-level-control-width*/
+}
+
+#application-loader .application-monday-loader-wrapper {
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+#application-loader .loader-first-level .loader-first-level-control-component {
+  border-right: none;
+  border-top-right-radius: 8px;
+}
+
+#application-loader .loader-first-level .loader-first-level-content {
+  border-top-left-radius: 8px;
+  margin-left: 40px;
+}
+
+#application-loader .loader-first-level .loader-first-level-content.is-expanded {
+  margin-left: 265px;
+}
+
+#application-loader .application-monday-loader-css {
+  -webkit-animation: monday-loader-spin-animation 1s linear infinite;
+  animation: monday-loader-spin-animation 1s linear infinite;
+  border: 5px solid #ddd;
+  border-top: 5px solid #00c875;
+  border-radius: 50%;
+  height: 46px;
+  width: 46px;
+  margin: auto;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+@keyframes monday-loader-spin-animation {
+  to {
+    border-top-color: #00c875;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes monday-loader-spin-animation {
+  to {
+    border-top-color: #00c875;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+</style>
+</head>
+<body id="main" class="global-brand-font new-layout ">
+<noscript>  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=226122027576470&ev=PageView&noscript=1" />
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDFBFJ9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+    
+<section id="application-loader">
+  <div class="loader-application-layers">
+      <div class="loader-surface"></div>
+    <div class="loader-first-level">
+        <div class="loader-first-level-control">
+          <div class="loader-first-level-control-component is-expanded" id="loader-first-level-control-component"></div>
+        </div>
+      <div class="loader-first-level-content is-expanded" id="loader-first-level-content">
+        <div class="application-monday-loader-wrapper" id="application-monday-loader-wrapper">
+          <img style="vertical-align: middle; border:0; content: url(https://cdn.monday.com/images/loader/loader.gif); content: var(--monday-loader-gif-path);" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  function removeElementClass(elId, classToRemove) {
+    const el = document.getElementById(elId);
+    if (el) {
+      el.classList.remove(classToRemove);
+    }
+  }
+
+  try {
+    const isExpanded = localStorage.getItem("first_level_control_is_pinned") !== "false";
+    if (!isExpanded) {
+      removeElementClass("loader-first-level-control-component", "is-expanded");
+      removeElementClass("loader-first-level-content", "is-expanded");
+    }
+    if (isExpanded) {
+      const currLeftPaneWidth = parseInt(localStorage.getItem("leftpane_current_width"));
+      if (currLeftPaneWidth) {
+        const leftPaneElement = document.getElementById("loader-first-level-control-component");
+        const contentElement = document.getElementById("loader-first-level-content");
+        if (leftPaneElement) {
+          leftPaneElement.style.width = `${currLeftPaneWidth}px`
+        }
+        if (contentElement) {
+          contentElement.style.marginLeft = `${currLeftPaneWidth + 10}px`
+        }
+      }
+    }
+    window.mondayHelpers.perfMarkPriorNextRepaint('first-loader-shown');
+  } catch (e) {
+    console.error("read from local storage or remove class error", e);
+  }
+</script>
+
+
+
+<link rel="stylesheet" media="all" href="https://cdn.monday.com/assets/pulse/ext-77f5733a17102ea9b04505b1d0664706e0703464f22369ff92392bd4bdf5e60c.css" />
+<link rel="stylesheet" media="all" href="https://cdn.monday.com/assets/pulse/screen-1c19da7f0858effa70994e1705f4c07ee67f8abe5108e20da50bae18aeae33f0.css" />
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css" />
+
+      <link rel="stylesheet" media="all" href="https://cdn.monday.com/build/react_vendor-908d8d3a5ea9dd470ab7.css" crossorigin="anonymous" />
+      <link rel="stylesheet" media="all" href="https://cdn.monday.com/build/monday_modules_vendor-9e2fd29de7f70a728588.css" crossorigin="anonymous" />
+      <link rel="stylesheet" media="all" href="https://cdn.monday.com/build/commons-from-main-f314913888079a62cd45.css" crossorigin="anonymous" />
+      <link rel="stylesheet" media="all" href="https://cdn.monday.com/build/table-with-error-state-fa7045e2f571e3f668b8.css" crossorigin="anonymous" />
+      <link rel="stylesheet" media="all" href="https://cdn.monday.com/build/components-c2c26f3add8541eb2811.css" crossorigin="anonymous" />
+      <link rel="stylesheet" media="all" href="https://cdn.monday.com/build/main-95c45c32ed34217a3962.css" crossorigin="anonymous" />
+
+<script>
+  BigBrain("track", "page-load-event", {
+    kind: "body-content-start",
+    info1: window.mondayHelpers.getTsFromPageLoadedAt(),
+    info2: window.mondayHelpers.getPageLoadedAt()
+  });
+</script>
+<script>
+window.mondayHelpers.deferredInit.addInitPromise("jquery_init");
+</script>
+
+<script src="https://cdn.monday.com/assets/lib/jquery-1.11.2-39cc7e053fb2635f0759e107fe933746213d55b818b20d9b6b6a772bdcc87ea2.js" onload="window.mondayHelpers.deferredInit.resolveInitPromise('jquery_init')"></script>
+
+
+    <script crossorigin src="https://cdn.monday.com/build/service-worker-interface-f201d13df4ee1f100d76.js" type="text/javascript"  ></script>
+
+
+<input style="display:none;" id="duplicate-tab-indicator-input" />
+
+<div id="application" class="application  new-layout">
+
+    <div id="system-top-container"></div>
+    <div id="reminder_bar"></div>
+
+  <div id="block-screens-container"></div>
+  <div class="application-layers" id="application-layers">
+
+      <div class="bypass-block-wrapper" id="bypass-block-wrapper"></div>
+
+      <div class="surface" id="surface">
+        <div class="surface-control" id="surface-control"></div>
+        <div class="surface-content" id="surface-content"></div>
+      </div>
+
+    <div class="first-level" id="first-level">
+        <div class="first-level-control" id="first-level-control"></div>
+
+      <div class="first-level-content-wrapper" id="first-level-content-wrapper">
+        <div class="first-level-content-header" id="first-level-content-header"></div>
+        <div id="board-view-ui-container"></div>
+        <div class="first-level-content" id="first-level-content" tabindex="-1">
+          
+<div id='monday-loader-wrapper' class='monday-loader-wrapper'>
+    <img src="https://cdn.monday.com/images/loader/loader.gif" />
+</div>
+<script>
+  if (window.performance) {
+    window.requestAnimationFrame(function(startFrameTimestamp) {
+      window.deprecatedFirstLoaderShownTime = window.deprecatedFirstLoaderShownTime || startFrameTimestamp;
+    });
+  }
+</script>
+
+        </div>
+        <div id='thumbnail-container'></div>
+        <div id="video-center-button-container"></div>
+        <div id="monday-only-bug-button-container"></div>
+
+        <div id="crm-sync-contacts-container"></div>
+        <div id="mf-caller-container"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id='platform-onboarding-container'></div>
+<div id='ai-ic-builder-container'></div>
+<div id="solutions-store-container"></div>
+<div class="dropdown-menu-portal-container"></div>
+  <div class="payments-container"></div>
+<div id="invite-users-modal-container"></div>
+<div id="recommended-apps-container"></div>
+<div id="mf-popup-container"></div>
+<div id="apps-generic-dialog-container"></div>
+<div class="create-board-from-templates-container"></div>
+<div id="pulse-card-dialog"></div>
+<div id="person-picker-dialog"></div>
+<div id="slide-panel-container"></div>
+<div id="import-xls-container"></div>
+<div id="calendar-integration-container"></div>
+<div id="keyboard-shortcuts-menu"></div>
+<div id="help-center"></div>
+<div id="learning-center"></div>
+<div id="whats-new-container"></div>
+<div id="general-side-panel"></div>
+<div id="record-widget-container"></div>
+<div class="system-notice-container"></div>
+<div class="system-wizard-container"></div>
+<div id="system-modal-container"></div>
+<div id="get-mobile-app-container"></div>
+<div id="surface-avatar-menu-dialog-container"></div>
+<div id="quick-search-container"></div>
+<div id="my-tasks-container"></div>
+<div id="education-onboarding-container"></div>
+<div id="onboarding-steps-container"></div>
+<div id="onboarding-overlay-container"></div>
+<div id="screen-reader-messages-container"></div>
+<div id="tooltips-container"></div>
+<div id='tips-container'></div>
+<div id='files-uploader-container'></div>
+<div id='toolbar-container'></div>
+<div id='automation-progress-container'></div>
+<div id='automation-live-status-notification-container'></div>
+<div id='confetti-container'></div>
+<div id='freeze-account'></div>
+<div id='automations-center-container'></div>
+<div id='mf-settings-container'></div>
+
+<script type="text/javascript">
+  window.Pulse = window.Pulse || {};
+  window.Pulse.translationsLoad = window.Pulse.translationsLoad || {};
+  window.Pulse.translationsLoad['platform'] = { src: 'https://cdn.monday.com/get_translations.js?locale=en&project=platform&timestamp=1719300042' };
+  window.Pulse.translationsLoad['microfrontends'] = { src: 'https://cdn.monday.com/get_translations.js?locale=en&project=microfrontends&timestamp=1719378374' };
+  window.Pulse.translationsLoad['microservices'] = { src: 'https://cdn.monday.com/get_translations.js?locale=en&project=microservices&timestamp=1719299839' };
+  window.mondayHelpers.deferredInit.addInitPromise("translations_platform");
+  window.mondayHelpers.deferredInit.addInitPromise("translations_mf");
+  window.mondayHelpers.deferredInit.addInitPromise("translations_ms");
+  window.mondayHelpers.deferredInit.addInitPromise("layout_static_data");
+  function resolveInitPromise(promiseName, isSuccess) {
+    window.mondayHelpers.deferredInit.resolveInitPromise(promiseName, { isSuccess });
+  }
+</script>
+<script async src="https://cdn.monday.com/get_translations.js?locale=en&project=platform&timestamp=1719300042" type="text/javascript" onload="resolveInitPromise('translations_platform')" onerror="resolveInitPromise('translations_platform', false)"></script>
+<script async src="https://cdn.monday.com/get_translations.js?locale=en&project=microfrontends&timestamp=1719378374" type="text/javascript" onload="resolveInitPromise('translations_mf')" onerror="resolveInitPromise('translations_mf', false)"></script>
+<script async src="https://cdn.monday.com/get_translations.js?locale=en&project=microservices&timestamp=1719299839" type="text/javascript" onload="resolveInitPromise('translations_ms')" onerror="resolveInitPromise('translations_ms', false)"></script>
+<script async src="https://cdn.monday.com/layout_static_data.js?hash=ae07b75a493925f68e589880a829513e" type="text/javascript" onload="resolveInitPromise('layout_static_data')" onerror="resolveInitPromise('layout_static_data', false)"></script>
+
+  
+<script>
+  window.microfrontends = window.microfrontends || {};
+  window.microfrontends.url = "https://microfrontends.monday.com";
+  window.microfrontends.mfsToPreload = ["mf-topbar","mf-leftpane","mf-board","Table"];
+  window.microfrontends.shouldUseMfAssetsEndpoint = true;
+  window.microfrontends.useMfAssetsFallback = true;
+
+  window.pulseScriptInit = {};
+  window.pulseScriptInit.asset_host = "https://cdn.monday.com"
+</script>
+
+  <script>
+window.mondayHelpers.deferredInit.addInitPromise("client_init_promise");
+</script>
+
+    <script crossorigin src="https://cdn.monday.com/build/client_init-9d0c6532242665c8f1e9.js" type="text/javascript"  ></script>
+
+
+    <script>
+window.mondayHelpers.deferredInit.addInitPromise("react_vendor_promise");
+</script>
+
+        <script crossorigin src="https://cdn.monday.com/build/react_vendor-9fac529ce2ce78252588.js" type="text/javascript"  onload="window.mondayHelpers.deferredInit.resolveInitPromise('react_vendor_promise')"></script>
+
+    <script>
+window.mondayHelpers.deferredInit.addInitPromise("utility_vendor_promise");
+</script>
+
+        <script crossorigin src="https://cdn.monday.com/build/utility_vendor-29d992903c89eaede471.js" type="text/javascript"  onload="window.mondayHelpers.deferredInit.resolveInitPromise('utility_vendor_promise')"></script>
+
+    <script>
+window.mondayHelpers.deferredInit.addInitPromise("monday_modules_vendor_promise");
+</script>
+
+        <script crossorigin src="https://cdn.monday.com/build/monday_modules_vendor-a9ff6a7874564b706169.js" type="text/javascript"  onload="window.mondayHelpers.deferredInit.resolveInitPromise('monday_modules_vendor_promise')"></script>
+
+    <script>
+window.mondayHelpers.deferredInit.addInitPromise("vendors_promise");
+</script>
+
+        <script crossorigin src="https://cdn.monday.com/build/vendors-978f05a913aecaffc4bc.js" type="text/javascript"  onload="window.mondayHelpers.deferredInit.resolveInitPromise('vendors_promise')"></script>
+
+    <script>
+window.mondayHelpers.deferredInit.addInitPromise("commons-from-main_promise");
+</script>
+
+        <script crossorigin src="https://cdn.monday.com/build/commons-from-main-b9337b55cf0ca9a10dc2.js" type="text/javascript"  onload="window.mondayHelpers.deferredInit.resolveInitPromise('commons-from-main_promise')"></script>
+
+    <script>
+window.mondayHelpers.deferredInit.addInitPromise("table-with-error-state_promise");
+</script>
+
+        <script crossorigin src="https://cdn.monday.com/build/table-with-error-state-a1707d1fb633eafd5152.js" type="text/javascript"  onload="window.mondayHelpers.deferredInit.resolveInitPromise('table-with-error-state_promise')"></script>
+
+    <script>
+window.mondayHelpers.deferredInit.addInitPromise("components_promise");
+</script>
+
+        <script crossorigin src="https://cdn.monday.com/build/components-bbf5ab38014919e7f7b7.js" type="text/javascript"  onload="window.mondayHelpers.deferredInit.resolveInitPromise('components_promise')"></script>
+
+
+<script>
+window.mondayHelpers.deferredInit.addInitPromise("lib_init");
+</script>
+
+<script src="https://cdn.monday.com/assets/lib-4fe49b3093fe20daf00fcd39a7d472a07fcedc2e5d6a86bfe52ca01129dcee6e.js" async="async" onload="window.mondayHelpers.deferredInit.resolveInitPromise('lib_init')"></script>
+
+
+
+        <script crossorigin src="https://cdn.monday.com/build/pulse_init-5c667a6f17bf04c5d9d6.js" type="text/javascript"  ></script>
+
+
+
+<script>
+  window._mondayMainBundleOptions = {}
+  window._mondayMainBundleOptions.preventExtendedMainInit = false
+</script>
+
+      <script crossorigin src="https://cdn.monday.com/build/main-265d1c8ddeb3939bb3fb.js" type="text/javascript"  ></script>
+
+
+    <script crossorigin src="https://cdn.monday.com/build/fullstory_init-a36f335c0235712d9a44.js" type="text/javascript"  ></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCm-Z64r_MNAEWxytqTUpVVN_qKXcqSHUI&libraries=places" defer async></script>
+
+
+
+<div id="fb-root" style="display:none"></div>
+<script>
+  BigBrain("track", "page-load-event", {
+    kind: "body-content-end",
+    info1: window.mondayHelpers.getTsFromPageLoadedAt(),
+    info2: window.mondayHelpers.getPageLoadedAt()
+  });
+</script>
+
+
+
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"899b4e10c9ddb5e1","version":"2024.4.1","token":"ef3b38c2289c47fa9034fc63ed8ed581"}' crossorigin="anonymous"></script>
+</body>
+</html>
